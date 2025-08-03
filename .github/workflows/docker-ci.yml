@@ -47,7 +47,6 @@ jobs:
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/ubuntu-network-toolkit:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/ubuntu-network-toolkit:${{ steps.git_tag.outputs.tag }}
 
       - name: Update Docker Hub description
         uses: peter-evans/dockerhub-description@v4
