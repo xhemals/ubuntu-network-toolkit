@@ -4,6 +4,10 @@ This Docker image is a minimal Ubuntu 24.04-based container designed to easily s
 
 This container automatically runs `dhclient` to obtain an IP address. Which means you don't have to worry about configuring your network interface manually.
 
+[![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/r/xhemal/ubuntu-network-toolkit) [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/xhemals/ubuntu-network-toolkit)
+
+![Docker Image Size](https://img.shields.io/docker/image-size/xhemal/ubuntu-network-toolkit) ![Docker Pulls](https://img.shields.io/docker/pulls/xhemal/ubuntu-network-toolkit)
+
 ## Features
 
 This image comes pre-installed with the following essential networking tools:
@@ -33,4 +37,3 @@ To use this image in your GNS3 project, follow these steps:
 7. Decide your container name.
 8. Leave the default settings for the remaining options.
 9. Import your container to your project.
-
