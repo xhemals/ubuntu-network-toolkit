@@ -23,3 +23,12 @@ RUN apt-get update && \
     tcpdump && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
+
+# Copy the entrypoint script to the container.
+COPY start.sh /usr/local/bin/start.sh
+
+# Make the script executable.
+RUN chmod +x /usr/local/bin/start.sh
+
+# Set the entrypoint to run the script.
+CMD ["/usr/local/bin/start.sh"]
