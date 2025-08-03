@@ -23,16 +23,3 @@ RUN apt-get update && \
     tcpdump && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
-
-# Copy the scripts directory to the container.
-COPY scripts /usr/local/bin/scripts
-
-# Copy the entrypoint script to the container.
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-
-# Make the scripts executable.
-RUN chmod +x /usr/local/bin/scripts/*.sh
-RUN chmod +x /usr/local/bin/entrypoint.sh
-
-# Set the entrypoint to run the script.
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
