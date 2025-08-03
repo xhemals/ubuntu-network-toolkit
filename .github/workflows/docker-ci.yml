@@ -46,5 +46,13 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/ubuntu-network-toolkit:${{ steps.branch_name.outputs.branch }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/ubuntu-network-toolkit:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/ubuntu-network-toolkit:${{ steps.git_tag.outputs.tag }}
+
+      - name: Update Docker Hub description
+        uses: peter-evans/dockerhub-description@v4
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          repository: ${{ secrets.DOCKERHUB_USERNAME }}/ubuntu-network-toolkit
+          readme-filepath: ./README.md

@@ -36,7 +36,3 @@ RUN chmod +x /usr/local/bin/entrypoint.sh
 
 # Set the entrypoint to run the script.
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
-
-# Set the default command to run when the container starts.
-# This will drop you into a bash shell, allowing you to use the installed tools.
-CMD ["bash"]
